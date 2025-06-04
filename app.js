@@ -40,3 +40,8 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log('Erreur Service Worker:', err));
   });
 }
+if (user === 1) {
+  msgEl.classList.add('self');
+} else {
+  msgEl.classList.add('other');
+}

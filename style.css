@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fond et couleur globale sur le body */
+body {
   background: #e0f7fa;
   color: #004d40;
 }
@@ -51,7 +55,7 @@ header p {
   background: #004d40;
   color: #e0f7fa;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 24px; /* légèrement arrondi plus doux */
   margin-bottom: 0.6rem;
   max-width: 75%;
   word-wrap: break-word;

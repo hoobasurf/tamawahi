@@ -6,7 +6,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fond et couleur globale sur le body */
+/* Fond général */
 body {
   background: #e0f7fa;
   color: #004d40;
@@ -48,24 +48,34 @@ header p {
   overflow-y: auto;
   margin-bottom: 1rem;
   box-shadow: inset 0 0 10px #004d40aa;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Message individuel */
 .message {
-  background: #004d40;
-  color: #e0f7fa;
-  padding: 0.5rem 1rem;
-  border-radius: 24px; /* légèrement arrondi plus doux */
-  margin-bottom: 0.6rem;
-  max-width: 75%;
+  max-width: 70%;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 16px;
   word-wrap: break-word;
 }
 
 /* Messages utilisateur (aligné à droite) */
 .message.self {
-  background: #00796b;
-  margin-left: auto;
+  background-color: #00796b;
+  color: white;
+  align-self: flex-end;
   text-align: right;
+}
+
+/* Messages autres (aligné à gauche) */
+.message.other {
+  background-color: #e0f7fa;
+  color: #004d40;
+  align-self: flex-start;
+  text-align: left;
 }
 
 /* Formulaire */
@@ -95,34 +105,4 @@ header p {
 
 #chat-form button:hover {
   background: #00796b;
-}
-.message.self {
-  align-self: flex-end;
-  background-color: #00796b;
-  color: white;
-}
-
-.message.other {
-  align-self: flex-start;
-  background-color: #b2dfdb;
-  color: #004d40;
-}
-.message {
-  max-width: 70%;
-  margin: 8px;
-  padding: 10px;
-  border-radius: 12px;
-  font-size: 16px;
-}
-
-.message.self {
-  background-color: #00796b;
-  color: white;
-  align-self: flex-end;
-}
-
-.message.other {
-  background-color: #e0f7fa;
-  color: #004d40;
-  align-self: flex-start;
 }

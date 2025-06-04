@@ -2,13 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tamawahi 🌺</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
 </head>
-  <link rel="manifest" href="/manifest.json" />
-
 <body>
   <div class="app">
     <header>
@@ -19,7 +17,14 @@
     <main>
       <div id="messages" class="messages"></div>
       <form id="chat-form">
-        <input type="text" id="message-input" placeholder="Écris un message..." required />
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Écris un message..."
+          required
+          autocomplete="off"
+          autofocus
+        />
         <button type="submit">Envoyer</button>
       </form>
     </main>

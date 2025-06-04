@@ -1,4 +1,4 @@
-/* Reset basique */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,33 @@ body {
   color: #004d40;
 }
 
-/* Conteneur principal */
+/* Animation d'entrée */
+.intro-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #b2ebf2, #e0f7fa);
+  animation: fadeOut 2s ease 2.5s forwards;
+}
+.intro-animation img {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+.intro-text {
+  font-size: 1.8rem;
+  color: #00796b;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Conteneur app */
 .app {
   max-width: 480px;
   margin: 2rem auto;
@@ -27,13 +53,11 @@ header {
   text-align: center;
   margin-bottom: 1rem;
 }
-
 header h1 {
   font-size: 2rem;
   margin-bottom: 0.2rem;
   color: #00695c;
 }
-
 header p {
   font-size: 1rem;
   color: #004d40;
@@ -48,11 +72,7 @@ header p {
   overflow-y: auto;
   margin-bottom: 1rem;
   box-shadow: inset 0 0 10px #004d40aa;
-  display: flex;
-  flex-direction: column;
 }
-
-/* Message individuel */
 .message {
   max-width: 70%;
   margin: 8px;
@@ -61,21 +81,15 @@ header p {
   font-size: 16px;
   word-wrap: break-word;
 }
-
-/* Messages utilisateur (aligné à droite) */
 .message.self {
   background-color: #00796b;
   color: white;
   align-self: flex-end;
-  text-align: right;
 }
-
-/* Messages autres (aligné à gauche) */
 .message.other {
   background-color: #e0f7fa;
   color: #004d40;
   align-self: flex-start;
-  text-align: left;
 }
 
 /* Formulaire */
@@ -83,7 +97,6 @@ header p {
   display: flex;
   gap: 0.5rem;
 }
-
 #message-input {
   flex-grow: 1;
   padding: 0.6rem 1rem;
@@ -91,7 +104,6 @@ header p {
   border: 2px solid #004d40;
   font-size: 1rem;
 }
-
 #chat-form button {
   background: #004d40;
   color: #e0f7fa;
@@ -102,48 +114,6 @@ header p {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-
 #chat-form button:hover {
   background: #00796b;
-}
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#7fdfff, #fff);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  animation: fadeOut 1s ease-in-out 3s forwards;
-}
-
-.splash-logo {
-  width: 120px;
-  height: auto;
-  animation: zoomIn 1.5s ease-in-out;
-}
-
-.splash-text {
-  margin-top: 20px;
-  font-size: 1.4rem;
-  color: #00796b;
-  animation: fadeInUp 2s ease-in-out;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
 }

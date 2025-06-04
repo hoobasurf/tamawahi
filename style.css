@@ -96,3 +96,14 @@ header p {
 #chat-form button:hover {
   background: #00796b;
 }
+.message.self {
+  align-self: flex-end;
+  background-color: #00796b;
+  color: white;
+}
+
+.message.other {
+  align-self: flex-start;
+  background-color: #b2dfdb;
+  color: #004d40;
+}

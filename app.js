@@ -33,3 +33,10 @@ form.addEventListener('submit', e => {
   // Alterner utilisateur (1 -> 2 -> 1 ...)
   activeUser = activeUser === 1 ? 2 : 1;
 });
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service worker enregistré:', reg))
+      .catch(err => console.log('Erreur Service Worker:', err));
+  });
+}

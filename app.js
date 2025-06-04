@@ -14,6 +14,8 @@ function addMessage(text, user) {
   msgEl.classList.add('message');
   if (user === 1) {
     msgEl.classList.add('self');
+  } else {
+    msgEl.classList.add('other');
   }
   msgEl.textContent = text;
 
@@ -33,15 +35,12 @@ form.addEventListener('submit', e => {
   // Alterner utilisateur (1 -> 2 -> 1 ...)
   activeUser = activeUser === 1 ? 2 : 1;
 });
+
+// Enregistrement du Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
       .then(reg => console.log('Service worker enregistré:', reg))
       .catch(err => console.log('Erreur Service Worker:', err));
   });
-}
-if (user === 1) {
-  msgEl.classList.add('self');
-} else {
-  msgEl.classList.add('other');
 }

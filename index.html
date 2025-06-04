@@ -4,16 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tamawahi 🌺</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Manifest + Icône -->
   <link rel="manifest" href="manifest.json" />
   <link rel="shortcut icon" href="assets/icons/favicon.ico" />
-</head>
-<body><div id="splash-screen">
-  <img src="assets/icons/lilo-stitch-logo.png" alt="Tamawahi Logo" class="splash-logo">
-  <p class="splash-text">✨ Bienvenue dans Tamawahi ✨</p>
-</div>
 
-  <div class="app">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Animation d'entrée -->
+  <div class="intro-animation">
+    <img src="assets/animations/lilo-stitch-opening.gif" alt="Magie Disney" />
+    <h1 class="intro-text">Bienvenue dans Tamawahi ✨</h1>
+  </div>
+
+  <!-- App principale -->
+  <div class="app" style="display: none;">
     <header>
       <h1>🌊 Tamawahi</h1>
       <p>Bienvenue dans ton espace privé d’échange magique ✨</p>
@@ -28,13 +36,13 @@
           placeholder="Écris un message..."
           required
           autocomplete="off"
-          autofocus
         />
         <button type="submit">Envoyer</button>
       </form>
     </main>
   </div>
 
+  <!-- JS -->
   <script src="app.js"></script>
 </body>
 </html>

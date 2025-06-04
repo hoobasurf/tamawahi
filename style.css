@@ -107,3 +107,22 @@ header p {
   background-color: #b2dfdb;
   color: #004d40;
 }
+.message {
+  max-width: 70%;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.message.self {
+  background-color: #00796b;
+  color: white;
+  align-self: flex-end;
+}
+
+.message.other {
+  background-color: #e0f7fa;
+  color: #004d40;
+  align-self: flex-start;
+}

@@ -12,31 +12,25 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<!-- Firebase App (core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
-
-<script>
-  // Ton code de configuration (à modifier avec tes vraies clés)
+  // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "TON_API_KEY",
-    authDomain: "TON_PROJECT.firebaseapp.com",
-    databaseURL: "https://TON_PROJECT.firebaseio.com",
-    projectId: "TON_PROJECT",
-    storageBucket: "TON_PROJECT.appspot.com",
-    messagingSenderId: "XXX",
-    appId: "XXX"
+    apiKey: "AIzaSyDgsmx94BtukesmzJereS4xrg66n7N4NnA",
+    authDomain: "tamawahi-de65f.firebaseapp.com",
+    projectId: "tamawahi-de65f",
+    storageBucket: "tamawahi-de65f.firebasestorage.app",
+    messagingSenderId: "800947167630",
+    appId: "1:800947167630:web:60c7374d5c18f7f16fc4df"
   };
 
-  // Initialisation Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // Référence à la base de données
-  const db = firebase.database();
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 </script>
-
 <body>
   <!-- Animation d'entrée -->
   <div class="intro-animation">
